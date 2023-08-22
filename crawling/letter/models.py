@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class letter(models.Model) :
+class Letter(models.Model) :
     title = models.CharField(max_length=100)
     write = models.CharField(max_length=100)
     send = models.CharField(max_length=100)

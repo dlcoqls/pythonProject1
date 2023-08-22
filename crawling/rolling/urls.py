@@ -20,8 +20,10 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 from . import views
 
-app_name = 'common'
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('letter.urls')),
 ]
