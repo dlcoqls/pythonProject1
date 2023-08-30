@@ -13,14 +13,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>List</h1>
-        <p>
-            <a href="{% url 'letter_done' %}"><button type="button" class="btn btn-outline-success">확인한 편지 목록</button></button></a>
-        </p>
+        <h4>List</h4>
         <ul class="list-group">
             {% for letter in letters %}
             <li class="list-group-item">
-                <a href="{% url 'letter_detail' pk=letter.pk %}">{{letter.title}}</a>
+                <a href="{% url 'letter_write' pk=letter.pk %}">{{letter.title}}</a>
                 {% if letter.important %}
                     <span class="badge badge-danger">!</span>
                 {% endif %}
@@ -31,6 +28,10 @@
             </li>
             {% endfor %}
         </ul>
+        <br>
+        <p>
+            <a href="{% url 'letter_done' %}"><button type="button" class="btn btn-outline-success">확인한 편지 목록</button></button></a>
+        </p>
     </div>
 </body>
 </html>
