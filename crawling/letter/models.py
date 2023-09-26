@@ -8,5 +8,5 @@ class Letter(models.Model) :
     contents = models.TextField(blank=True)
     complete = models.BooleanField(default=False)
 
-    def __str__(self):
+    def __str__(selfs):
         return self.title

@@ -59,7 +59,8 @@
 <body>
 <div class="login">
     <h2>Login</h2>
-    <form method="post" action="서버의url" id="login-form">
+    <form method="post" action="{% url 'common:login' %}" id="login-form">
+        {% csrf_token %}
         <input type="text" name="userName" placeholder="id">
         <input type="password" name="userPassword" placeholder="Password">
         <label for="remember-check">
@@ -68,6 +69,8 @@
         <input type="submit" value="Login">
 
     </form>
+
+    <a href="{% url 'common:signup' %}">회원가입</a>
 </div>
 
 </body>
