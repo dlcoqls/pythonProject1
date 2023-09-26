@@ -151,9 +151,10 @@
     </style>
     </head>
     <body>
-        <form method="POST">
-            <h3><a href="">작성 글</a></h3>
-        </form>
+            <form method="POST">
+                {% csrf_token %} {{form.as_p}}
+                <h3><a href="">작성 글</a></h3>
+            </form>
             <section class="reply-list table-common">
                 <table border="1">
                     <colgroup>
