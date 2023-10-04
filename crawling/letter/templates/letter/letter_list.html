@@ -153,7 +153,7 @@
     <body>
             <form method="POST">
                 {% csrf_token %} {{form.as_p}}
-                <h3><a href="">작성 글</a></h3>
+                <h3><a href="{% url 'letter_write' %}">{{letter.title}}</a></h3>
             </form>
             <section class="reply-list table-common">
                 <table border="1">
