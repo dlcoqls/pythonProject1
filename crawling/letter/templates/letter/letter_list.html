@@ -9,7 +9,7 @@
         body {overflow:hidden}
 
         h3 {
-            margin-top: 110px;
+            margin-top: 300px;
             margin-left: 25%;
             overflow: hidden;
             list-style: none;
@@ -146,6 +146,7 @@
             font-weight:bold;
         }
 
+
     </style>
     </head>
     <body>
@@ -158,6 +159,8 @@
                     <table>
                         <tr>
                             <td><a href="{% url 'letter_write' pk=.pk %}">{{done.title}}</a></td>
+                            <td><button class="btn" onclick="location.href=''">수정</button></td>
+                            <td><button class="btn" onclick="location.href=''">삭제</button></td>
                         </tr>
                         <tr>
                             <td>&nbsp</td>
@@ -181,6 +184,5 @@
                 </table>
             </section>
         <footer></footer>
-
     </body>
 </html>

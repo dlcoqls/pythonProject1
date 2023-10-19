@@ -33,3 +33,7 @@ def main(request):
                 return HttpResponseRedirect(reverse('posts:write'))
         else:
             return render(request, 'letter/letter_main2.html')
+
+
+def letter_list():
+    return None
